@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boundary Sidebar Nav | JS Practice</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="nav-real">
+      <div class="nav-wrapper">
+        <div class="menu-container">
+          <div class="menu-container-top">
+            <span id="menu-container-top"> Menu </span>
+          </div>
+          <div class="menu-container-bottom">
+            <span id="menu-container-bottom"> Menu </span>
+          </div>
+        </div>
+
+        <svg
+          class="boundary-logo"
+          width="100%"
+          height="100%"
+          viewBox="0 0 91 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M84.7705 12.7021L87.998 4.43359H90.4277L85.5352 16.6035C84.5106 19.1184 83.6181 19.9999 81.8252 20C81.6203 20 81.4664 19.9754 81.2871 19.9502L81.0566 19.874V17.9883H81.0654C82.3714 17.9882 82.9565 17.3843 83.2383 16.6035L83.6221 15.4697L80.0303 6.66797H78.252C76.6938 6.66813 75.4385 7.95335 75.4385 9.43555V15.8516H73.1377V4.53027H74.7988L75.3105 5.66406C75.5154 5.43736 75.772 5.21051 76.0537 5.03418C76.5404 4.73192 77.2576 4.40436 78.252 4.4043H79.1064V4.40332H81.5361L84.7705 12.7021ZM18.0771 4.40527C21.1466 4.40539 23.5762 6.7944 23.5762 10.1914C23.5761 13.5884 21.1466 15.9774 18.0771 15.9775C15.0076 15.9775 12.5782 13.5884 12.5781 10.1914C12.5781 6.79431 15.0076 4.40527 18.0771 4.40527ZM25.1553 4.53027H27.4561V11.0732C27.4563 12.6099 28.7115 13.8398 30.1416 13.8398C31.6527 13.8398 32.9548 12.6057 32.9551 11.0732V4.53027H35.2559V15.8516H33.5908L33.0791 14.7178C32.8486 14.9445 32.5916 15.1713 32.2842 15.3477C31.7462 15.6751 30.9011 15.9775 29.7529 15.9775C27.1957 15.9775 25.1465 13.9657 25.1465 11.0684V4.52637L25.1553 4.53027ZM60.0312 15.8516H58.3701L57.8574 14.7178C57.6269 14.9445 57.3708 15.1713 57.0635 15.3477C56.5256 15.6752 55.6805 15.9775 54.5322 15.9775C51.4627 15.9775 49.0333 13.5884 49.0332 10.1914C49.0332 6.79431 51.4626 4.40527 54.5322 4.40527C55.6336 4.40532 56.3977 4.73284 56.9355 5.03516C57.2429 5.21151 57.499 5.43832 57.7295 5.66504V0H60.0312V15.8516ZM66.7891 4.4043C69.4743 4.40434 71.2675 6.16418 71.2676 8.43164V15.8555H69.6064L69.0947 14.7217L69.0859 14.7178C68.8554 14.9445 68.5993 15.1713 68.292 15.3477C67.7541 15.6752 66.9082 15.9775 65.7598 15.9775C63.2027 15.9774 61.7939 14.5914 61.7939 12.5801C61.7941 10.317 63.3315 8.80566 68.958 8.80566V8.42773C68.958 7.29409 68.215 6.54216 66.7852 6.54199C65.2525 6.54199 64.6115 7.14673 64.4834 7.92773H62.1826C62.3107 5.9164 63.9458 4.4043 66.7891 4.4043ZM2.72852 5.66016C2.959 5.43346 3.21518 5.20662 3.52246 5.03027C4.06039 4.72794 4.82956 4.40039 5.92676 4.40039C8.99624 4.40051 11.4258 6.79049 11.4258 10.1875C11.4256 13.5843 8.99611 15.9735 5.92676 15.9736C4.77406 15.9736 3.93246 15.6713 3.39453 15.3438C3.08723 15.1674 2.83108 14.9406 2.60059 14.7139L2.08887 15.8477H0.427734V0H2.72852V5.66016ZM42.7656 4.40527C45.3228 4.4054 47.3721 6.41646 47.3721 9.30957V15.8516H45.0703V9.30957C45.0703 7.82319 43.8158 6.54218 42.3857 6.54199C40.8275 6.54199 39.5723 7.82728 39.5723 9.30957V15.8516H37.2705V4.53125H38.9277L39.4395 5.66504C39.6699 5.43839 39.9262 5.21149 40.2334 5.03516C40.7713 4.73282 41.6172 4.40527 42.7656 4.40527ZM68.958 10.8213C64.8643 10.8213 64.0998 11.5767 64.0996 12.7061C64.0996 13.3358 64.7396 13.9657 65.8877 13.9658C67.8302 13.9658 68.958 12.8324 68.958 11.4258V10.8213ZM18.0811 6.54199C16.4204 6.54207 14.8838 8.05411 14.8838 10.1914C14.8838 12.3287 16.4161 13.8407 18.0811 13.8408C19.746 13.8408 21.2792 12.3287 21.2793 10.1914C21.2793 8.05405 19.7418 6.54199 18.0811 6.54199ZM5.79883 6.54199C4.03563 6.54199 2.47266 8.05405 2.47266 10.1914C2.47272 12.3287 4.03566 13.8398 5.79883 13.8398C7.56184 13.8396 9.12396 12.3285 9.12402 10.1914C9.12402 8.05421 7.56187 6.54221 5.79883 6.54199ZM54.6602 6.54199C52.897 6.54199 51.334 8.05405 51.334 10.1914C51.334 12.3287 52.897 13.8398 54.6602 13.8398C56.4233 13.8398 57.9853 12.3287 57.9854 10.1914C57.9854 8.05409 56.4233 6.54204 54.6602 6.54199Z"
+            fill="currentColor"
+          ></path>
+        </svg>
+
+        <div class="founder-button">
+          <div class="founder-button-interior">
+            <span id="founder-button-copy">Talk to a founder</span>
+            <div class="founder-button-dot"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="intro">
+      <div class="intro-wrapper">
+        <div class="intro-left">
+          <h1>Digital for modern restaurant concepts</h1>
+          <p>
+            Noble 33 has developed an expansive and luxurious portfolio of
+            restaurants worldwide. The hospitality company was in need of an
+            equally impressive digital presence. First, we developed a technical
+            ecosystem that included a parent site for all the different brands,
+            a template for individual restaurant sites, a mobile app for VIP
+            services, and a CRM to streamline management across all of their
+            locations and members. A modular design system was also created so
+            Noble 33 can easily scale as they build future locations.
+          </p>
+        </div>
+        <div class="intro-right">
+          <div class="intro-right-element">
+            <span class="intro-element-header">Client</span>
+            <span class="intro-element-subheader">Noble33</span>
+          </div>
+          <div class="intro-right-element">
+            <span class="intro-element-header">Project Type</span>
+            <span class="intro-element-subheader">Web Design</span>
+          </div>
+          <div class="intro-right-element">
+            <span class="intro-element-header">Industry</span>
+            <span class="intro-element-subheader">Hospitality</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="image-grid">
+      <div class="image-grid-wrapper">
+        <div class="image-grid-top">
+          <img src="assets/img1.avif" alt="" />
+        </div>
+        <div class="image-grid-bottom">
+          <div class="grid-bottom-left">
+            <img src="assets/img5.avif" alt="" />
+          </div>
+          <div class="grid-bottom-right">
+            <img src="assets/img4.avif" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="body-copy-2">
+      <div class="body-copy-2-wrapper">
+        <h3 class="body-copy-2-header">Bespoke design + codebase</h3>
+        <div class="body-copy-2-content">
+          <p>
+            The main challenge was creating a technical architecture that would
+            allow employees to update content across all three platforms at
+            once, rather than having to go to the Noble 33 CMS, restaurant CMS,
+            and the Mobile App separately. So we started with a thorough
+            technical audit to determine which solution was best to manage
+            everything seamlessly.
+          </p>
+          <p>
+            One of the most important considerations during the UX/UI design of
+            the parent website was creating flexible modules that could be
+            leveraged across all individual restaurant websites, as well.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slider">
+      <div class="slider-wrapper">
+        <div class="slider-item">
+          <img src="assets/img6.avif" alt="" />
+        </div>
+        <div class="slider-item">
+          <img src="assets/img7.avif" alt="" />
+        </div>
+        <div class="slider-item">
+          <img src="assets/img3.avif" alt="" />
+        </div>
+        <div class="slider-item">
+          <img src="assets/img6.avif" alt="" />
+        </div>
+        <div class="slider-item">
+          <img src="assets/img7.avif" alt="" />
+        </div>
+        <div class="slider-item">
+          <img src="assets/img3.avif" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="body-copy-3">
+      <div class="body-copy-3-wrapper">
+        <h3 class="body-copy-3-header">VIP experience on a mobile app</h3>
+        <div class="body-copy-3-content">
+          <p>
+            We created a premium experience for Noble 33 members by giving them
+            access to a digital card, private events, and unique perks based on
+            their membership tier.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-image">
+      <div class="final-image-wrapper">
+        <img src="assets/img2.avif" alt="" />
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-upper">
+          <h1 class="footer-header">
+            Boundary is a Los Angeles-based creative agency that builds brands
+            and digital experiences for global innovation.
+          </h1>
+
+          <div class="founder-button">
+            <div class="founder-button-interior">
+              <span id="founder-button-copy">Talk to a founder</span>
+              <div class="founder-button-dot"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-lower">
+          <div class="footer-lower-left-upper">
+            <div class="column">
+              <span class="footer-lower-left-upper-header">Studio</span>
+              <span class="footer-lower-left-upper-content">What we do</span>
+              <span class="footer-lower-left-upper-content">Our clients</span>
+              <span class="footer-lower-left-upper-content">Insights</span>
+              <span class="footer-lower-left-upper-content">Get in touch</span>
+            </div>
+            <div class="column">
+              <span class="footer-lower-left-upper-header">Services</span>
+              <span class="footer-lower-left-upper-content">Branding</span>
+              <span class="footer-lower-left-upper-content"
+                >Digital deisgn</span
+              >
+              <span class="footer-lower-left-upper-content">Development</span>
+            </div>
+            <div class="column">
+              <div class="contact-triple">
+                <div class="contact-triple-content">
+                  <span class="footer-lower-left-upper-head">Contact Us</span>
+                  <span class="footer-lower-left-upper-content"
+                    >hola@boundaryla.com</span
+                  >
+                </div>
+                <div class="contact-triple-content">
+                  <span class="footer-lower-left-upper-head">Location</span>
+                  <span class="footer-lower-left-upper-content"
+                    >142 Richmond St<br />El Segundo, CA 90245</span
+                  >
+                </div>
+                <div class="contact-triple-content">
+                  <span class="footer-lower-left-upper-head"
+                    >Open Till We Close</span
+                  >
+                  <span class="footer-lower-left-upper-content">9AM-6PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-lower-right-upper">
+            <div class="footer-lower-right-upper-wrapper">
+              <img src="assets/icons8-instagram-100.png" alt="" />
+              <img src="assets/icons8-linkedin-30.png" alt="" />
+              <img src="assets/icons8-x-100.png" alt="" />
+            </div>
+          </div>
+          <div class="boundary-copyright">
+            <span>© Boundary, 2026</span>
+          </div>
+          <div class="boundary-privacy">
+            <span>Privacy Policy</span>
+            <span>Terms & Conditions</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
