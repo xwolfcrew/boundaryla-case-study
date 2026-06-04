@@ -516,6 +516,108 @@ footer {
   font-size: clamp(10px, 1vw, 10px);
 }
 
+.nav-menu {
+  position: fixed;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  will-change: opacity;
+}
+
+.nav-menu.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.nav-menu-wrapper {
+  position: relative;
+  width: 16vw;
+  height: 100%;
+  background-color: white;
+  padding: 2rem 3rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-radius: 0 2rem 2rem 0;
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+  will-change: transform, opacity;
+}
+
+.nav-menu-wrapper.active {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.link-container .container-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: left;
+}
+
+.link-container .container-links p {
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(24px, 1.5vw, 28px);
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+  transition: letter-spacing 0.5s ease;
+}
+
+.link-container .container-links p:hover {
+  letter-spacing: 2%;
+  cursor: pointer;
+}
+
+.sublink-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sublink-container p {
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(14px, 1vw, 16px);
+  font-weight: 400;
+  transition: letter-spacing 0.5s ease;
+}
+
+.sublink-container p:hover {
+  letter-spacing: 2%;
+  cursor: pointer;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+}
+
+.social-links p {
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(14px, 1vw, 16px);
+  font-weight: 400;
+}
+
 @media (max-width: 1000px) {
   .nav-wrapper {
     grid-template-columns: 1fr auto;
@@ -595,6 +697,14 @@ footer {
     width: 100%;
     gap: 2rem;
   }
+
+  .nav-menu-wrapper {
+    width: 50vw;
+  }
+
+   .link-container .container-links p {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -612,5 +722,13 @@ footer {
 
   .footer-upper h1 {
     width: 100%;
+  }
+
+  .nav-menu-wrapper {
+    width: 50vw;
+  }
+
+  .link-container .container-links p {
+    font-size: 18px;
   }
 }
